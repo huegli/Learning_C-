@@ -1,31 +1,24 @@
 #include <iostream>
-#include <cstring>
+#include <string>
 using namespace std;
 
 int main() {
-    char str[600];
-    char name[100];
-    char addr[200];
-    char work[200];
-
+    string str,name, addr, work;
+   
     // Get three strings from the user.
 
     cout << "Enter name and press ENTER: ";
-    cin.getline(name, 99);
+    getline(cin,name);
     cout << "Enter address and press ENTER: ";
-    cin.getline(addr, 199);
+    getline(cin,addr);
     cout << "Enter workplace and press ENTER: ";
-    cin.getline(work, 199);
+    getline(cin,work);
 
     // Build the output string and then print it.
 
-    strcpy(str, "\nMy name is ");
-    strcat(str, name);
-    strcat(str, ", I live at ");
-    strcat(str, addr);
-    strcat(str, "\nand I work at ");
-    strcat(str, work);
-    strcat(str, ".");
+    str = "\nMy name is " + name + ", " +
+        "I live at " + addr +
+        "\nand I work at " + work + ".\n";
 
     cout << str << endl;
 
